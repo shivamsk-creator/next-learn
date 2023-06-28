@@ -6,7 +6,7 @@ const Login = () => {
     <div>
       Login Page
       <Link href="/" className="mx-10">
-        Go to HomePage
+        Go to HomePage llorem30000
       </Link>
     </div>
   );
