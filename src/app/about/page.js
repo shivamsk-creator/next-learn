@@ -1,11 +1,18 @@
 "use client";
+import { Roboto } from "next/font/google";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-
 import React from "react";
+
+
+const roboto = Roboto({
+  weight : "100",
+  subsets: ["latin"]
+})
 
 const About = () => {
   const router = useRouter();
+
 
   const navigate = (page) => {
     router.push("/about/" + page);
@@ -31,8 +38,16 @@ const About = () => {
       >
         Student Page
       </button>
+
+    <div className="mt-20">
+
+{/* <h2 style={{fontFamily: 'Roboto'}}>Text with link tag of fonts </h2> */}
+<h2 className={roboto.className}>Text with importing font from next/font </h2>
+    </div>
     </div>
   );
 };
 
 export default About;
+
+
